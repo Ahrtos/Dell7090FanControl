@@ -1,8 +1,26 @@
 # Dell7090FanControl
 
-A small Windows fan-control utility built specifically for the **Dell OptiPlex 7090 Micro**.
+[![Latest release](https://img.shields.io/github/v/release/Ahrtos/Dell7090FanControl?display_name=tag)](https://github.com/Ahrtos/Dell7090FanControl/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Ahrtos/Dell7090FanControl/total)](https://github.com/Ahrtos/Dell7090FanControl/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%2011-0078D4)](#requirements)
+
+A lightweight Windows fan-control utility built specifically for the **Dell OptiPlex 7090 Micro**.
 
 It provides a practical alternative to Dell's very conservative stock fan behavior by using Dell's `LegacyDiags` WMI/SMM interface for the normal fan levels and Dell Command | Configure for the persistent MAX override.
+
+### [⬇ Download the latest release](https://github.com/Ahrtos/Dell7090FanControl/releases/latest)
+
+## Quick start
+
+1. Download the latest portable ZIP from **Releases**.
+2. Extract it to a permanent folder.
+3. Install **Dell Command | Configure** if you want to use MAX mode.
+4. Run `Dell7090FanControl.vbs`.
+5. Accept the Windows UAC prompt.
+
+> [!TIP]
+> If you only want the custom Level 1 / Level 2 automatic control, Dell Command | Configure is only required for the separate MAX mode.
 
 > [!WARNING]
 > **Tested hardware: Dell OptiPlex 7090 Micro only.**  
@@ -74,11 +92,7 @@ Level 1 and Level 2 use Dell's WMI/SMM interface directly. MAX uses Dell's `FanC
 
 ## Installation / portable use
 
-1. Install **Dell Command | Configure** if you want to use MAX mode.
-2. Download the latest portable ZIP from **Releases**.
-3. Extract the ZIP to a permanent folder.
-4. Start `Dell7090FanControl.vbs`.
-5. Accept the Windows UAC prompt.
+The short version is in [Quick start](#quick-start). The latest packaged build is always available on the [Releases page](https://github.com/Ahrtos/Dell7090FanControl/releases/latest).
 
 The application can create its own scheduled task when **Start with Windows (minimized to tray)** is enabled.
 
@@ -165,9 +179,11 @@ They are intentionally excluded from the repository.
 - The current v1.0 release is a portable PowerShell/WinForms application, not a native signed Windows executable.
 - Code signing is not currently provided, so Windows may show the normal UAC/security prompts for scripts.
 
-## Reporting compatibility results
+## Reporting bugs or compatibility results
 
-If you test this on another **OptiPlex 7090 Micro**, an issue containing the following is useful:
+GitHub issue forms are included for both bug reports and hardware compatibility reports.
+
+If you test this on another **OptiPlex 7090 Micro**, please report:
 
 - CPU model
 - BIOS version
@@ -177,6 +193,8 @@ If you test this on another **OptiPlex 7090 Micro**, an issue containing the fol
 - MAX RPM
 - Whether Sensor 0 follows CPU load
 - Any unexpected behavior when returning to Dell BIOS Auto
+
+[Open a new issue](https://github.com/Ahrtos/Dell7090FanControl/issues/new/choose)
 
 Please **do not test MAX on an unsupported Dell model unless you understand the persistence warning above**.
 
