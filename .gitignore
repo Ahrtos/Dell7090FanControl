@@ -1,0 +1,14 @@
+# Runtime files
+Dell7090FanControl.json
+Dell7090FanControl.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Archives / local release output
+*.zip
+
+# Editors
+.vscode/
+.idea/
