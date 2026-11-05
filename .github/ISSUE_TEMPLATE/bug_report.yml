@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a problem on a Dell OptiPlex 7090 Micro
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Dell7090FanControl. Please remove service tags, serial numbers and other private identifiers from logs.
+
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU
+      placeholder: Intel Core i7-11700T
+    validations:
+      required: true
+
+  - type: input
+    id: bios
+    attributes:
+      label: BIOS version
+      placeholder: "1.45.0"
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 25H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cctk
+    attributes:
+      label: Dell Command | Configure installed?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the exact mode or action and the unexpected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines
+      description: Paste only relevant Dell7090FanControl.log lines. Remove private identifiers first.
+      render: text
+
+  - type: checkboxes
+    id: hardware
+    attributes:
+      label: Hardware confirmation
+      options:
+        - label: I am reporting this from a Dell OptiPlex 7090 Micro.
+          required: true
