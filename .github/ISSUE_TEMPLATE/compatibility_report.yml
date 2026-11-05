@@ -1,7 +1,7 @@
 name: 7090 Micro compatibility report
 description: Share fan RPM and sensor behavior from another OptiPlex 7090 Micro
 title: "[Compatibility] "
-labels: ["compatibility"]
+labels: []
 body:
   - type: input
     id: cpu
