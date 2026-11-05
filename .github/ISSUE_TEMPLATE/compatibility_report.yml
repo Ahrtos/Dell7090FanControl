@@ -1,0 +1,77 @@
+name: 7090 Micro compatibility report
+description: Share fan RPM and sensor behavior from another OptiPlex 7090 Micro
+title: "[Compatibility] "
+labels: ["compatibility"]
+body:
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU
+      placeholder: Intel Core i5-10500T
+    validations:
+      required: true
+
+  - type: input
+    id: bios
+    attributes:
+      label: BIOS version
+      placeholder: "1.45.0"
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 25H2
+    validations:
+      required: true
+
+  - type: input
+    id: l1
+    attributes:
+      label: Level 1 RPM
+      placeholder: "1140"
+    validations:
+      required: true
+
+  - type: input
+    id: l2
+    attributes:
+      label: Level 2 RPM
+      placeholder: "3980"
+    validations:
+      required: true
+
+  - type: input
+    id: max
+    attributes:
+      label: MAX RPM
+      placeholder: "5700 or not tested"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sensor0
+    attributes:
+      label: Does Dell Sensor 0 follow CPU load?
+      options:
+        - "Yes"
+        - "No"
+        - "Unclear"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Mention any unusual behavior, especially when returning to Dell BIOS Auto.
+
+  - type: checkboxes
+    id: hardware
+    attributes:
+      label: Hardware confirmation
+      options:
+        - label: This report is for a Dell OptiPlex 7090 Micro.
+          required: true
