@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the hardware notice first
+    url: https://github.com/Ahrtos/Dell7090FanControl/blob/main/HARDWARE-NOTICE.md
+    about: Important information about Dell SMM control and the persistent MAX override.
